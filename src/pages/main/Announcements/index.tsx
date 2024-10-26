@@ -39,7 +39,7 @@ const Announcements = () => (
         <Parallax y={[0, 0]} tagOuter="figure">
             <div className={cn.announcements}>
                 <div className={cn.info}>
-                    <h2>Анонсы</h2>
+                    <h2>Митапы</h2>
                 </div>
                 <div className={cn.content}>
                     <Slider {...settings}>
@@ -47,7 +47,7 @@ const Announcements = () => (
                             // eslint-disable-next-line react/no-array-index-key
                             <div className={cn.item} key={index}>
                                 <div className={cn.innerTop}>
-                                    <Image
+                                    <img
                                         className={cn.image}
                                         src={item.image}
                                         alt={item.title}

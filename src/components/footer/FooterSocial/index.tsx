@@ -11,7 +11,7 @@ const FooterSocial = () => (
             {socialServices.map((item: IMenuItem) => (
                 <li className={cn.listItem} key={item.code}>
                     <a className={cn.item} href={item.link}>
-                        <Image
+                        <img
                             className={cn.image}
                             src={`/img/social/${item.code}.svg`}
                             alt={item.name}

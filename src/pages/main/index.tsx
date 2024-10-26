@@ -8,7 +8,7 @@ import Report from '@/pages/main/Report';
 const MainPage = () => (
     <>
         <MainScreen />
-        <Announcements />
+        {/* <Announcements /> */}
         <Report />
         <Join />
     </>

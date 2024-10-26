@@ -7,7 +7,7 @@ import cn from './style.module.sass';
 const HeaderLogo = () => (
     <Link href="/">
         <a className={cn.link}>
-            <Image
+            <img
                 className={cn.image}
                 src="/img/logo.svg"
                 alt="PHP RND"
