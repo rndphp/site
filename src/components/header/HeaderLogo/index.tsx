@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import cn from './style.module.sass';
 
@@ -11,7 +10,7 @@ const HeaderLogo = () => (
                 className={cn.image}
                 src="/img/logo.svg"
                 alt="PHP RND"
-                layout="fixed"
+                // layout="fixed"
                 width={176}
                 height={64}
             />

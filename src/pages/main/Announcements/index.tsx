@@ -3,7 +3,6 @@ import 'slick-carousel/slick/slick.css';
 import Slider, { Settings } from '@ant-design/react-slick';
 import RestrictBlock from '@components/ui/RestrictBlock';
 import { announcementList } from '@data/announcementsList';
-import Image from 'next/image';
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
@@ -51,7 +50,7 @@ const Announcements = () => (
                                         className={cn.image}
                                         src={item.image}
                                         alt={item.title}
-                                        layout="responsive"
+                                        // layout="responsive"
                                         width={464}
                                         height={260}
                                     />

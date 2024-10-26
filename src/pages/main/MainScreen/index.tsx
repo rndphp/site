@@ -1,9 +1,5 @@
-import { ButtonAll } from '@components/ui/button/ButtonAll';
-import Application from '@components/ui/modals/Application';
-import ModalWrapper from '@components/ui/modals/ModalWrapper';
 import RestrictBlock from '@components/ui/RestrictBlock';
-import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
 import cn from './style.module.sass';

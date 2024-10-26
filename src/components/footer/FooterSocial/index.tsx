@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 import { socialServices } from '@data/socialServices';
 import { IMenuItem } from '@/types/layout';
@@ -15,7 +14,7 @@ const FooterSocial = () => (
                             className={cn.image}
                             src={`/img/social/${item.code}.svg`}
                             alt={item.name}
-                            layout="fixed"
+                            // layout="fixed"
                             width={50}
                             height={50}
                         />

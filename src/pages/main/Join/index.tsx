@@ -2,7 +2,6 @@ import 'slick-carousel/slick/slick.css';
 
 import RestrictBlock from '@components/ui/RestrictBlock';
 import clsx from 'clsx';
-import Image from 'next/image';
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
