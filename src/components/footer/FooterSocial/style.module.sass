@@ -1,0 +1,56 @@
+@import "@sassConfig"
+
+.social
+
+.list
+	display: flex
+	align-items: center
+
+	+desktop
+		margin: 0 -30px
+	+tablet
+		margin: 0 -10px
+	+mobile
+		margin: 0 -8px
+
+.listItem
+
+	+desktop
+		padding: 0 30px
+	+tablet
+		padding: 0 10px
+	+mobile
+		padding: 0 8px
+
+.item
+	position: relative
+	display: block
+	transition: box-shadow .2s ease-in-out, transform .2s ease-in-out
+
+	+desktop
+		width: 50px
+		height: 50px
+
+		&:hover
+			transform: scale(1.05)
+		&:focus
+			box-shadow: 0 0 0 5px rgba(255, 255, 255, .4)
+
+	+tablet
+		width: 40px
+		height: 40px
+	+mobile
+		width: 34px
+		height: 34px
+
+	&:active
+		transform: scale(.95)
+	&:focus
+		outline: none
+
+	&>div
+		position: absolute
+		top: 0
+		left: 0
+		width: 100% !important
+		height: 100% !important

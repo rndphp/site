@@ -1,0 +1,29 @@
+@import "@sassConfig"
+
+.wrapper
+	display: flex
+	align-items: center
+
+	+max-width($desktop)
+		justify-content: space-between
+	+desktop
+		height: 144px
+	+tablet
+		height: 90px
+	+mobile
+		height: 72px
+
+
+.logo
+
+	+desktop
+		margin-right: 100px
+
+
+
+.header
+	position: absolute
+	z-index: 10
+	top: 0
+	left: 0
+	width: 100%

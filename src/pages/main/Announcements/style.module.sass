@@ -1,0 +1,153 @@
+@import "@sassConfig"
+
+
+.announcements
+	display: flex
+	align-items: flex-start
+	+max-width($mobile)
+		flex-direction: column
+
+
+	\:global(.slick-track)
+		display: flex !important
+		align-items: stretch
+
+	\:global(.slick-slide)
+		height: auto !important
+
+		& > div
+			height: 100%
+
+
+	\:global(.slick-arrow)
+		position: absolute
+		top: 115px
+		left: -360px
+		width: 58px
+		height: 58px
+		border-radius: 6px
+		background: $yellow
+		cursor: pointer
+		font-size: 0
+		transition: background-color .3s ease
+		+max-width($tablet)
+			left: -230px
+		+max-width($mobile)
+			left: 0px
+			top: calc(100% + 35px)
+			width: 48px
+			height: 48px
+
+		&:hover
+			background: rgba(255, 228, 64, 0.3)
+
+		&:active
+			background: rgba(255, 228, 64, 0.4)
+
+		&:focus
+			background: rgba(255, 228, 64, 0.4)
+
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			display: block
+			width: 12px
+			height: 24px
+			background: url(../../../assets/images/svg/arrow-left.svg) no-repeat center / contain
+			+max-width($mobile)
+				width: 10px
+				height: 20px
+
+
+	\:global(.slick-arrow.slick-next)
+		left: -288px
+		+max-width($tablet)
+			left: -158px
+		+max-width($mobile)
+			left: 68px
+
+		&:before
+			transform: translate(-50%, -50%) rotate(180deg)
+
+
+.info
+	max-width: 380px
+	width: 100%
+	flex: 0 0 auto
+	+max-width($tablet)
+		max-width: 250px
+	+max-width($mobile)
+		max-width: 100%
+		width: 100%
+
+
+.content
+	margin: 0 -20px
+	width: 100%
+	+max-width($tablet)
+		max-width: calc(100% - 210px)
+	+max-width($mobile)
+		max-width: calc(100% + 30px)
+		width: 100%
+		margin: 0px
+		padding: 0 0 85px
+
+
+// item
+.item
+	padding: 0 20px
+	height: 100%
+	display: flex !important
+	flex-direction: column
+	justify-content: space-between
+	+max-width($mobile)
+		padding: 0
+
+
+.title
+	color: $black
+	margin: 20px 0 10px
+	font: 700 20px/150% $font
+	letter-spacing: 1px
+	+max-width($tablet)
+		font-size: 18px
+		margin: 15px 0 5px
+
+
+.desc
+	color: $black
+	margin: 0 0 15px
+	font: 400 16px/150% $font
+	letter-spacing: 1px
+	+max-width($tablet)
+		font-size: 14px
+	+max-width($mobile)
+		font-size: 13px
+		line-height: 120%
+
+
+.place
+	color: $color
+	margin: 0 0 10px
+	font: 400 16px/130% $font
+	letter-spacing: 1px
+	+max-width($tablet)
+		font-size: 14px
+	+max-width($mobile)
+		font-size: 13px
+		line-height: 120%
+		margin: 0 0 10px
+
+
+.date
+	color: $black
+	font: 600 16px/130% $font
+	letter-spacing: 1px
+	+max-width($tablet)
+		font-size: 14px
+	+max-width($mobile)
+		font-size: 13px
+		line-height: 120%

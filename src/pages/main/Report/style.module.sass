@@ -1,0 +1,60 @@
+@import "@sassConfig"
+
+
+.report
+	display: flex
+	align-items: center
+	justify-content: space-between
+	+max-width($mobile)
+		flex-direction: column
+		align-items: flex-start
+
+
+.content
+	max-width: 570px
+	width: 100%
+	flex: 0 0 auto
+	margin: 0 25px 130px 0
+	+max-width($tablet)
+		max-width: 350px
+		margin: 0 0 30px 0
+	+max-width($mobile)
+		max-width: 100%
+		width: 100%
+		padding-left: 20px
+
+		br
+			display: none
+
+
+.desc
+	margin: 0 0 60px
+	font: 400 20px/150% $font
+	letter-spacing: 1px
+	color: $black
+	+max-width($tablet)
+		font-size: 18px
+		margin: 0 0 40px
+	+max-width($mobile)
+		font-size: 13px
+		line-height: 130%
+		margin: 0 0 20px
+
+	span
+		font-weight: 500
+
+
+.imageWrapper
+	max-width: calc(100% - 570px - 25px)
+	margin: 0 150px 0 0
+	+max-width($desktop-lg)
+		margin: 0 50px 0 0
+	+max-width($tablet)
+		max-width: calc(100% - 350px - 50px)
+	+max-width($mobile)
+		max-width: 480px
+		width: 100%
+		padding: 0 0 40px
+		margin: 0
+
+

@@ -1,0 +1,77 @@
+@import "@sassConfig"
+
+a.btnAll
+    display: inline-flex
+
+
+.btnAll
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    border-radius: 6px
+    font-size: 16px
+    line-height: 100%
+    font-family: $font
+    font-weight: 500
+    letter-spacing: 1px
+    padding: 0 1.55vw
+    border: 0 none
+    transition: background .3s ease, color .3s ease, outline .3s ease, opacity .3s ease
+    cursor: pointer
+    height: 58px
+    min-width: 213px
+    color: $color
+
+    +tablet-mobile
+        padding: 0 36px
+
+    +mobile
+        height: 54px
+        font-size: 14px
+        padding: 0 36px
+
+    &:before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        top: 0
+        width: 100%
+        transform-origin: left
+        border-radius: 6px
+        transition: background .3s ease, opacity .3s ease, width .5s ease, border .5s ease
+
+    span
+        position: relative
+        z-index: 1
+
+
+    &:before
+        background: $yellow
+
+    &:hover
+        &:before
+            background: rgba(255, 228, 64, 0.3)
+
+    &:active
+        &:before
+            background: rgba(255, 228, 64, 0.4)
+
+    &:focus
+        &:before
+            background: rgba(255, 228, 64, 0.4)
+
+    &:focus
+        outline: 1px solid $color
+
+
+    &.disable
+        cursor: default
+        color: $color
+        &:before
+            background: rgba(242, 242, 247, .4)
+
+
+

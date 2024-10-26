@@ -1,0 +1,38 @@
+/*
+import { useState, useEffect } from 'react';
+import { isBrowser } from '@helpers/utils';
+
+type TDevice = 'mobile' | 'tablet-mobile' | 'desktop';
+
+function getWindowSizes(device: TDevice) {
+    if (!isBrowser()) return true;
+
+    const { innerWidth: width } = window;
+
+    switch (device) {
+        case 'mobile':
+            return width <= 765;
+        case 'tablet-mobile':
+            return width <= 991;
+        case 'desktop':
+            return width >= 992;
+        default:
+            return true;
+    }
+}
+
+export default function useCheckDevice(device: TDevice) {
+    const [status, setStatus] = useState<boolean>(getWindowSizes(device));
+
+    const handleResizeWindow = () => {
+        setStatus(getWindowSizes(device));
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResizeWindow);
+        return () => window.removeEventListener('resize', handleResizeWindow);
+    }, []);
+
+    return status;
+}
+*/

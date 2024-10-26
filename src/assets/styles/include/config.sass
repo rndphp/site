@@ -1,0 +1,199 @@
+@charset "UTF-8"
+
+// Осовные шрифты
+// ==============
+$font: 'Montserrat', sans-serif
+
+
+// Основные цвета
+// ============
+$color: #080966
+$black: #000000
+$white: #ffffff
+$fiolet-light: #2E3192
+$yellow: #FFE440
+
+
+
+
+$bgColor: #fff
+$textColor: #2e2e2e
+
+$linkHeaderBtmColor: #00CCEA
+$linkColor: #3ab1ea
+$linkHoverColor: #3FCCF9
+$linkActiveColor: #25A1DC
+
+$btnColor: #3AB1EA
+$btnHoverColor: #3FCCF9
+$btnActiveColor: #25A1DC
+$btnInactiveColor: #A9B0BB
+
+$footerBgColor: linear-gradient(270deg, #2E3192 33.38%, #2A2D8E 38.45%, #00005C 99.63%)
+
+
+// Экраны
+// ======
+$desktop-lg: 1496
+$desktop: 1199
+$tablet: 991
+$mobile: 767
+$mobile-sm: 575
+
+$max-width: 1496px
+$min-width: 320px
+
+
+@mixin clearfix
+	&:after
+		content: ''
+		display: table
+		clear: both
+
+
+@mixin max-width($width)
+	@media only screen and (max-width: #{$width}px)
+		@content
+
+@mixin min-width($width)
+	@media only screen and (min-width: #{$width}px)
+		@content
+
+@mixin min-max-width($minWidth, $maxWidth)
+	@media only screen and (min-width: #{$minWidth}px) and (max-width: #{$maxWidth}px)
+		@content
+
+@mixin max-height($height)
+	@media only screen and (max-height: #{$height}px)
+		@content
+
+@mixin min-height($height)
+	@media only screen and (min-height: #{$height}px)
+		@content
+
+
+
+// Медиазапросы
+// ============
+// desktop >= 992px
+@mixin desktop()
+	+min-width($tablet+1)
+		@content
+// desktop-max >= 1200px
+@mixin desktop-max()
+	+min-width($desktop+1)
+		@content
+// 992px <= desktop-min <= 1199px
+@mixin desktop-min()
+	+min-max-width($tablet+1, $desktop)
+		@content
+
+// 768px <= tablet <= 991px
+@mixin tablet()
+	+min-max-width($mobile+1, $tablet)
+		@content
+
+// mobile <= 767px
+@mixin mobile()
+	+max-width($mobile)
+		@content
+// 576px <= mobile-max <= 767px
+@mixin mobile-max()
+	+min-max-width($mobile-sm+1, $mobile)
+		@content
+// mobile-min <= 575px
+@mixin mobile-min()
+	+max-width($mobile-sm)
+		@content
+
+// desktop-tablet >= 768px
+@mixin desktop-tablet()
+	+min-width($mobile+1)
+		@content
+// tablet-mobile <= 991px
+@mixin tablet-mobile()
+	+max-width($tablet)
+		@content
+
+
+
+@mixin animation()
+	animation-duration: .3s
+	animation-fill-mode: both
+	animation-timing-function: ease-in-out
+	animation-delay: .05s
+
+@mixin fadeIn()
+	animation-name: animationFadeIn
+	+animation
+
+@mixin fadeInUp()
+	animation-name: animationFadeInUp
+	+animation
+
+@mixin fadeInDown()
+	animation-name: animationFadeInDown
+	+animation
+
+@mixin fadeInLeft()
+	animation-name: animationFadeInLeft
+	+animation
+
+@mixin fadeInLeftMin()
+	animation-name: animationFadeInLeftMin
+	+animation
+
+@mixin fadeInRight()
+	animation-name: animationFadeInRight
+	+animation
+
+
+@keyframes animationFadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+
+@keyframes animationFadeInUp
+	0%
+		opacity: 0
+		transform: translateY(100px)
+	100%
+		opacity: 1
+		transform: translateY(0)
+
+
+@keyframes animationFadeInDown
+	0%
+		opacity: 0
+		transform: translateY(-100px)
+	100%
+		opacity: 1
+		transform: translateY(0)
+
+
+@keyframes animationFadeInLeft
+	0%
+		opacity: 0
+		transform: translateX(-100px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+@keyframes animationFadeInLeftMin
+	0%
+		opacity: 0
+		transform: translateX(-5px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+
+@keyframes animationFadeInRight
+	0%
+		opacity: 0
+		transform: translateX(100px)
+	100%
+		opacity: 1
+		transform: translateX(0)

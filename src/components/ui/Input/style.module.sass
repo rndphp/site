@@ -1,0 +1,47 @@
+@import @sassConfig
+
+.wrapper
+    width: 100%
+    position: relative
+    max-width: 100%
+    transition: opacity 0.3s
+
+    &:hover
+        opacity: 0.8
+
+
+    +mobile
+        max-width: 100%
+
+
+
+.input
+    padding: 12px 20px
+    font: 400 16px/120% $font
+    letter-spacing: 1px
+    color: $black
+    border: 1px solid #E5E5E5
+    background: $white
+    border-radius: 6px
+    width: 100%
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s
+    -webkit-user-select: text
+    +max-width($mobile)
+        font-size: 14px
+
+
+.label
+    font: 400 16px/120% $font
+    letter-spacing: 1px
+    color: $black
+    margin: 0 0 8px 8px
+    +max-width($mobile)
+        font-size: 14px
+
+
+.error
+    margin-top: 10px
+    color: red
+    font: 14px $font
+    +max-width($mobile)
+        font-size: 12px

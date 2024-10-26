@@ -1,0 +1,37 @@
+@import "@sassConfig"
+
+
+.wrapper
+	display: flex
+	align-items: center
+	justify-content: space-between
+	min-height: 100vh
+	+max-width($desktop-lg)
+		min-height: 520px
+	+max-width($desktop)
+		min-height: 0
+		flex-direction: column-reverse
+		align-items: flex-start
+		justify-content: flex-end
+
+
+.content
+	max-width: 580px
+	position: relative
+	z-index: 1
+
+
+.imageContainer
+	position: absolute
+	top: 0
+	right: 0
+	max-width: 66%
+	+max-width($desktop-lg)
+		max-width: calc(100% - 530px)
+	+max-width($desktop)
+		position: static
+		margin: 0 -20px 0 auto
+		max-width: 80%
+	+mobile
+		max-width: 100%
+

@@ -1,0 +1,65 @@
+/*
+import { isBrowser } from '@helpers/utils';
+
+interface IProtoOptions {
+    domain?: string;
+    path?: string;
+    sameSite?: 'Lax' | 'None' | 'Secure' | 'Strict';
+}
+
+interface IOptions extends IProtoOptions {
+    expires?: number | Date;
+}
+
+interface IResultOptions extends IProtoOptions {
+    expires?: number | Date | string;
+}
+
+const defaultCookiesOptions: IOptions = {
+    expires: 7,
+    domain: `.${process.env.APP_FRONT_HOST}`,
+    path: '/',
+    sameSite: 'Lax',
+};
+
+const oneDay: number = 1000 * 60 * 60 * 24;
+
+export const getCookie = (name: string): string | undefined => {
+    if (isBrowser()) {
+        const matches = new RegExp(
+            `(?:^|; )${name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)`
+        ).exec(document.cookie);
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+};
+
+export const setCookie = (name: string, value: string | number, props: IOptions = {}) => {
+    if (isBrowser()) {
+        const resultOptions: IResultOptions = { ...defaultCookiesOptions, ...props };
+
+        const exp = props.expires;
+        if (typeof exp === 'number') {
+            let d = new Date();
+            d.setTime(d.getTime() + exp * oneDay);
+            resultOptions.expires = d.toUTCString();
+        }
+        if (typeof exp === 'object') {
+            resultOptions.expires = exp.toUTCString();
+        }
+
+        let updatedCookie = `${name}=${encodeURIComponent(value)}`;
+
+        for (const propName in resultOptions) {
+            if (resultOptions.hasOwnProperty(propName)) {
+                updatedCookie += `; ${propName}=${resultOptions[propName]}`;
+            }
+        }
+
+        document.cookie = updatedCookie;
+    }
+};
+
+export const removeCookie = (name: string) => {
+    setCookie(name, null, { expires: -1 });
+};
+*/

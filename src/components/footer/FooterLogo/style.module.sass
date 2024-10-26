@@ -1,0 +1,22 @@
+@import "@sassConfig"
+
+.link
+	position: relative
+	display: block
+
+	+desktop
+		width: 138px
+		height: 50px
+	+tablet
+		width: 115px
+		height: 40px
+	+mobile
+		width: 95px
+		height: 34px
+
+	&>div
+		position: absolute
+		top: 0
+		left: 0
+		width: 100% !important
+		height: 100% !important

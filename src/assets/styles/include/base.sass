@@ -1,0 +1,68 @@
+@import "config"
+
+*, *::before, *::after
+	box-sizing: border-box
+
+html
+	height: 100%
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+
+body
+	display: block
+	height: 100%
+	position: relative
+	color: $textColor
+	background-color: $bgColor
+
+	+desktop
+		font: 16px/150% $font
+	+tablet-mobile
+		font: 14px/150% $font
+
+	& > div#__next
+		height: 100%
+
+main
+	max-width: 1000px
+
+b, strong
+	font-weight: 700
+
+i, em
+	font-style: italic
+
+a
+	color: $linkColor
+	transition: color .3s ease
+
+	&, &:hover, &:active, &:focus
+		text-decoration: none
+	&:hover
+		color: $linkHoverColor
+	&:active, &:focus
+		color: $linkActiveColor
+
+img
+	max-width: 100%
+	vertical-align: bottom
+
+
+.h1,
+h1,
+h2
+	font: 700 50px/130% $font
+	color: $color
+	margin: 0 0 60px
+	+max-width($desktop)
+		font-size: 40px
+		margin: 0 0 40px
+	+max-width($mobile)
+		font-size: 32px
+		line-height: 120%
+		margin: 0 0 30px
+
+
+h2
+	margin: 0 0 20px
+

@@ -1,0 +1,28 @@
+@import "@sassConfig"
+
+.row
+	display: flex
+	margin: 0 -20px
+	width: calc(100% + 2*20px)
+	+max-width($mobile)
+		flex-direction: column
+		width: 100%
+		margin: 0
+
+
+.input
+	margin: 0 0 24px
+
+	.row &
+		margin-left: 20px
+		margin-right: 20px
+		width: calc((100% - 2*20px)/2)
+		+max-width($mobile)
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+
+
+.buttonWrapper
+	display: flex
+	justify-content: center
